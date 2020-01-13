@@ -10,7 +10,7 @@ import Foundation
 
 
 class AccountInteractor: PresenterToInteractorAccountProtocol{
-    
+
     var presenter: InteractorToPresenterAccountProtocol?
     
     func fetchAccountBalance() {
@@ -20,7 +20,13 @@ class AccountInteractor: PresenterToInteractorAccountProtocol{
             self.presenter?.fetchAccountBalanceSuccess(walletAddress: result.address, balance: result.balance)
             //
         }) { error in
-            self.presenter?.fetchAccountBalanceFailed(error: error.localizedDescription)
+            self.presenter?.fetchAccountBalanceFailed()
         }
     }
+    
+    func clearAllSavedData() {
+        // On Logout
+        DataManager.shared.clearAllSavedData()
+     }
+     
 }

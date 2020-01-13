@@ -30,6 +30,7 @@ class AccountPresenter: ViewToPresenterAccountProtocol {
     }
    
      func performLogout(navigationController: UINavigationController) {
+        interactor?.clearAllSavedData()
         router?.logout(navigationConroller: navigationController)
       }
       
@@ -40,7 +41,7 @@ extension AccountPresenter: InteractorToPresenterAccountProtocol{
     func fetchAccountBalanceSuccess(walletAddress : String, balance : String) {
     view?.displayBalance(walletAddress: walletAddress, balance: balance)
     }
-    func fetchAccountBalanceFailed(error: String) {
+    func fetchAccountBalanceFailed() {
     view?.showError()
     }
     

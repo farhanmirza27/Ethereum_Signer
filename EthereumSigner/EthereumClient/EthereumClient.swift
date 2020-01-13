@@ -34,7 +34,7 @@ class EthereumClient : EthereumClientProtocol {
     static let shared = EthereumClient()
     
     let web3RinkeBy =  Web3.InfuraRinkebyWeb3()
-
+    
     
     // Fetch account balance from RinkeBy
     func fetchAccountBalance(address : String,_ responseHandler: @escaping ResponseHandler<Wallet>, _ errorHandler: @escaping ErrorHandler) {
@@ -46,7 +46,7 @@ class EthereumClient : EthereumClientProtocol {
             responseHandler(wallet)
         }
         else {
-            // handle error
+           errorHandler(NSError())
         }
         
     }
@@ -96,14 +96,32 @@ class EthereumClient : EthereumClientProtocol {
     // Verify Signature
     func verifySignatureWithPublicKey(message: String, _ responseHandler: @escaping ResponseHandler<Bool>, _ errorHandler: @escaping ErrorHandler) {
         
-        // sign message with user private key
-        // save signature which need to be verified
-        signMessageWithPrivateKey(message: message, privateKey: DataManager.shared.getPrivateKey(), { result in
-        // save signature for message need to be verified
-        
-        }) { (error) in
+        getEthereumPrivateKey(keyString: DataManager.shared.getPrivateKey(), { result in
+            
+            // sign message with user private key
+            // save signature which need to be verified
+            // retrieve public key
+            
+            if let signedMessage = try? result.sign(message: message.makeBytes()) {
+                let v = EthereumQuantity(integerLiteral: UInt64(signedMessage.v))
+                let r = EthereumQuantity(signedMessage.r)
+                let s = EthereumQuantity(signedMessage.s)
+                
+                if let publicKey = try? EthereumPublicKey(message: message.makeBytes(), v: v, r: r, s: s) {
+                    DataManager.shared.save(obj: userWallet(privateKey: result.hex(), publicKey: publicKey.hex(), address: publicKey.address.hex(eip55: false)), forKey: "UserWallet")
+                    responseHandler(true)
+                // match this address with address fetched from QR code
+                    
+                }
+            }
+            
+            
+            
+        }) { error in
             errorHandler(error)
         }
+        
+        
     }
     
     // Generate QR Code

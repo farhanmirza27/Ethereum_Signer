@@ -45,4 +45,13 @@ class DataManager {
         return UserDefaults.standard.string(forKey: "walletAddress") ?? ""
     }
     
+    func clearAllSavedData() {
+    func resetDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
+    }
+    }
 }

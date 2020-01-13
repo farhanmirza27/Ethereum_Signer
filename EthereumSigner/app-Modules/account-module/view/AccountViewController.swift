@@ -24,6 +24,7 @@ class AccountViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Fetch Balance for Wallet
         accountPresenter!.fetchAccountBalance()
         setupViews()
         
@@ -54,15 +55,17 @@ class AccountViewController: BaseViewController {
         verifyButton.addTarget(self, action: #selector(navigateToMessageVerification), for: .touchUpInside)
     }
     
-    
+    // Sign Message Clicked
     @objc func navigateToSignMessage() {
         accountPresenter?.showSigningController(navigationController: self.navigationController!)
     }
     
+    // Verify Button Clicked
     @objc func navigateToMessageVerification() {
         accountPresenter?.showVerificationController(navigationController: self.navigationController!)
     }
     
+    // Perform Logout
     @objc func logout() {
         accountPresenter?.performLogout(navigationController: navigationController!)
     }
@@ -71,10 +74,12 @@ class AccountViewController: BaseViewController {
 
 extension AccountViewController : PresenterToViewAccountProtocol {
     func showError() {
+        // Failed to fetch data
         self.alert(message: "Failed to get account details. Please try again later.")
     }
     
     func displayBalance(walletAddress: String, balance: String) {
+        // Display Data
         addressLabel.text = walletAddress
         balanceLabel.text = balance
     }

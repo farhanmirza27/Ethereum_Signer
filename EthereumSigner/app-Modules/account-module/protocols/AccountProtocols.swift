@@ -37,10 +37,11 @@ protocol PresenterToRouterAccountProtocol: class {
 protocol PresenterToInteractorAccountProtocol: class {
     var presenter:InteractorToPresenterAccountProtocol? {get set}
     func fetchAccountBalance()
+    func clearAllSavedData() 
 }
 
 protocol InteractorToPresenterAccountProtocol: class {
     func fetchAccountBalanceSuccess(walletAddress : String, balance : String)
-    func fetchAccountBalanceFailed(error : String)
+    func fetchAccountBalanceFailed()
 }
 

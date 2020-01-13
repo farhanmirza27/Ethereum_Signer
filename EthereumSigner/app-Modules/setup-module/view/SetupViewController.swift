@@ -48,10 +48,12 @@ extension SetupViewController : UITextFieldDelegate {
 
 extension SetupViewController :  PresenterToViewProtocol {
     func showAccountScreen() {
+        // Move user to account screen
         presenter?.showAccountController(navigationController: self.navigationController!)
     }
     
     func showError() {
+        // show error if key is invalid
         self.alert(message: "Please provide a valid private key")
     }
     

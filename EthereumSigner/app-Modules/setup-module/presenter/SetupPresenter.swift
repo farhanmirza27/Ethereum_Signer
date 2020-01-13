@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 class SetupPresenter: ViewToPresenterProtocol {
-   
+    
     var view: PresenterToViewProtocol?
     
     var interactor: PresenterToInteractorProtocol?
@@ -20,12 +20,17 @@ class SetupPresenter: ViewToPresenterProtocol {
     
     func showAccountController(navigationController: UINavigationController) {
         router?.pushToAccountScreen(navigationConroller: navigationController)
-     }
-   
+    }
+    
+    func didClickDone(privateKey : String) {
+        interactor?.saveUserPrivateKey(key: privateKey)
+    }
+    
 }
 
 extension SetupPresenter: InteractorToPresenterProtocol{
-    func userWalletSaved() {
-    //
+    func userPrivateKeySaved() {
+        // user private key saved. Move user to account screen
+        view?.showAccountScreen()
     }
 }

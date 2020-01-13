@@ -13,11 +13,14 @@ protocol ViewToPresenterProtocol: class{
     var view: PresenterToViewProtocol? {get set}
     var interactor: PresenterToInteractorProtocol? {get set}
     var router: PresenterToRouterProtocol? {get set}
+    
+    func didClickDone(privateKey : String)
     func showAccountController(navigationController: UINavigationController)
 }
 
 protocol PresenterToViewProtocol: class{
-    //func showAccountScreen()
+     func showAccountScreen()
+     func showError()
 }
 
 protocol PresenterToRouterProtocol: class {
@@ -28,10 +31,10 @@ protocol PresenterToRouterProtocol: class {
 
 protocol PresenterToInteractorProtocol: class {
     var presenter:InteractorToPresenterProtocol? {get set}
-    func saveUserWallet(wallet : Wallet)
+    func saveUserPrivateKey(key : String)
 }
 
 protocol InteractorToPresenterProtocol: class {
-    func userWalletSaved()
+    func userPrivateKeySaved()
 }
 

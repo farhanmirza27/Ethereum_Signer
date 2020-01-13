@@ -36,13 +36,12 @@ class AccountPresenter: ViewToPresenterAccountProtocol {
 }
 
 extension AccountPresenter: InteractorToPresenterAccountProtocol{
-    func fetchAccountBalanceSuccess() {
-        view?.fetchBalance()
-    //
+ 
+    func fetchAccountBalanceSuccess(walletAddress : String, balance : String) {
+    view?.displayBalance(walletAddress: walletAddress, balance: balance)
     }
-    
-    func fetchAccountBalanceFailed() {
-    ///
+    func fetchAccountBalanceFailed(error: String) {
+    view?.showError()
     }
     
 }

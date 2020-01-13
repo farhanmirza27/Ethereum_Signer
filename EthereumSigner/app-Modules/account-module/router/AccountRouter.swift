@@ -27,11 +27,13 @@ class AccountRouter: PresenterToRouterAccountProtocol{
     }
     
     func pushToSiginingScreen(navigationConroller: UINavigationController) {
-        navigationConroller.pushViewController(SigningViewController(), animated: true)
+        let signingModule = SigningRouter.createSigningModule()
+            navigationConroller.pushViewController(signingModule,animated: true)
     }
     
     func pushToVerificationScreen(navigationConroller: UINavigationController) {
-         navigationConroller.pushViewController(VerificationViewController(), animated: true)
+         let verificationModule = VerficationRouter.createVerificationModule()
+         navigationConroller.pushViewController(verificationModule,animated: true)
     }
     
     func logout(navigationConroller: UINavigationController) {

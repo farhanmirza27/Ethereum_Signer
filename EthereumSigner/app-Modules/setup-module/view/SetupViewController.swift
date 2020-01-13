@@ -26,18 +26,33 @@ class SetupViewController: BaseViewController {
         saveAreaView.addSubview(privateKeyTF)
         saveAreaView.addHConstraint(leftInset: 30, rightInset: 30, view: privateKeyTF)
         saveAreaView.addConstraintsWithFormat("V:|-20-[v0(50)]", views: privateKeyTF)
+
     }
 }
 
+
 extension SetupViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        // Navigate to account controller
-        presenter?.showAccountController(navigationController: self.navigationController!)
+        
+        // check for empty textfield
+        if let text = textField.text {
+            if !text.isEmpty {
+                textField.resignFirstResponder()
+                presenter?.didClickDone(privateKey: text.trimmingCharacters(in: .whitespacesAndNewlines))
+            }
+        }
         return true
     }
 }
 
 
 extension SetupViewController :  PresenterToViewProtocol {
+    func showAccountScreen() {
+        presenter?.showAccountController(navigationController: self.navigationController!)
+    }
+    
+    func showError() {
+        self.alert(message: "Please provide a valid private key")
+    }
+    
 }

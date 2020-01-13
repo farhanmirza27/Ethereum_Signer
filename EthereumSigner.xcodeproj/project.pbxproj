@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		023EDA5103EE405429605725 /* Pods_EthereumSigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811A95EBDE97E5BCF1150F48 /* Pods_EthereumSigner.framework */; };
+		A95F28B823CBD3AA0014FD23 /* SignatureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F28B723CBD3AA0014FD23 /* SignatureProtocol.swift */; };
+		A95F28BC23CBD50F0014FD23 /* SignatureInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F28BB23CBD50F0014FD23 /* SignatureInteractor.swift */; };
+		A95F28BF23CBD6380014FD23 /* SignatureRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F28BE23CBD6380014FD23 /* SignatureRouter.swift */; };
 		A9639B9823C49F390090562D /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639B9723C49F390090562D /* Wallet.swift */; };
 		A9639B9B23C4D10F0090562D /* SetupProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639B9A23C4D10F0090562D /* SetupProtocols.swift */; };
 		A9639B9F23C4D2250090562D /* SetupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639B9E23C4D2250090562D /* SetupPresenter.swift */; };
@@ -18,6 +21,12 @@
 		A9639BB123C506860090562D /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639BB023C506860090562D /* AccountPresenter.swift */; };
 		A9639BB323C5070A0090562D /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639BB223C5070A0090562D /* AccountRouter.swift */; };
 		A9639BB523C507CE0090562D /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639BB423C507CE0090562D /* AccountInteractor.swift */; };
+		A9639BBC23C51D0B0090562D /* SigningProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639BBB23C51D0B0090562D /* SigningProtocols.swift */; };
+		A9639BBE23C51D2D0090562D /* SigningInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639BBD23C51D2D0090562D /* SigningInteractor.swift */; };
+		A9639BC023C51D390090562D /* SigningRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639BBF23C51D390090562D /* SigningRouter.swift */; };
+		A9639BC223C51D480090562D /* SigningPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639BC123C51D480090562D /* SigningPresenter.swift */; };
+		A97C4A7A23CC8B3E00DF1590 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C4A7923CC8B3E00DF1590 /* DataManager.swift */; };
+		A97D79BD23C7E22500E622A5 /* SignaturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D79BC23C7E22500E622A5 /* SignaturePresenter.swift */; };
 		A98A1EA323C1E290005B37D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98A1EA223C1E290005B37D6 /* AppDelegate.swift */; };
 		A98A1EA523C1E290005B37D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98A1EA423C1E290005B37D6 /* SceneDelegate.swift */; };
 		A98A1EAC23C1E296005B37D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98A1EAB23C1E296005B37D6 /* Assets.xcassets */; };
@@ -26,13 +35,22 @@
 		A98A1ECA23C270B8005B37D6 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98A1EC923C270B8005B37D6 /* UIComponents.swift */; };
 		A98A1ECC23C271DB005B37D6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98A1ECB23C271DB005B37D6 /* Extensions.swift */; };
 		A98A1ED123C27815005B37D6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98A1ED023C27815005B37D6 /* BaseViewController.swift */; };
+		A992B4F523C86230003FF44A /* ScannerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992B4F423C86230003FF44A /* ScannerInteractor.swift */; };
+		A992B4F723C8623E003FF44A /* ScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992B4F623C8623E003FF44A /* ScannerPresenter.swift */; };
+		A992B4F923C8624C003FF44A /* ScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992B4F823C8624C003FF44A /* ScannerRouter.swift */; };
+		A992B4FB23C86267003FF44A /* ScannerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992B4FA23C86267003FF44A /* ScannerProtocols.swift */; };
 		A9ADBA1A23C3DF8F00738703 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADBA1923C3DF8F00738703 /* SignatureViewController.swift */; };
 		A9ADBA1D23C3E3FC00738703 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADBA1C23C3E3FC00738703 /* VerificationViewController.swift */; };
 		A9ADBA2023C3E51800738703 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADBA1F23C3E51800738703 /* ScannerViewController.swift */; };
 		A9ADBA2323C3E85600738703 /* EthereumClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADBA2223C3E85600738703 /* EthereumClient.swift */; };
+		A9B6656623CBDC2400F7429D /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6656523CBDC2400F7429D /* Signature.swift */; };
 		A9E8FB0E23C279B40046A40C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E8FB0D23C279B40046A40C /* AccountViewController.swift */; };
 		A9E8FB1023C285270046A40C /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E8FB0F23C285270046A40C /* Fonts.swift */; };
 		A9E8FB1323C293AE0046A40C /* SigningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E8FB1223C293AE0046A40C /* SigningViewController.swift */; };
+		A9FF186B23C70A8000BF2965 /* VerificationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF186A23C70A8000BF2965 /* VerificationProtocols.swift */; };
+		A9FF186D23C70B3F00BF2965 /* VerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF186C23C70B3F00BF2965 /* VerificationPresenter.swift */; };
+		A9FF186F23C70C0600BF2965 /* VerificationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF186E23C70C0600BF2965 /* VerificationInteractor.swift */; };
+		A9FF187123C70C8600BF2965 /* VerificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF187023C70C8600BF2965 /* VerificationRouter.swift */; };
 		E04DB9821AB708CB8AD57EFD /* Pods_EthereumSignerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB06C991CEC6D1A4529E32D /* Pods_EthereumSignerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +67,9 @@
 /* Begin PBXFileReference section */
 		5D1289EE7719BEA72DB1C753 /* Pods-EthereumSigner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSigner.debug.xcconfig"; path = "Target Support Files/Pods-EthereumSigner/Pods-EthereumSigner.debug.xcconfig"; sourceTree = "<group>"; };
 		811A95EBDE97E5BCF1150F48 /* Pods_EthereumSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95F28B723CBD3AA0014FD23 /* SignatureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureProtocol.swift; sourceTree = "<group>"; };
+		A95F28BB23CBD50F0014FD23 /* SignatureInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureInteractor.swift; sourceTree = "<group>"; };
+		A95F28BE23CBD6380014FD23 /* SignatureRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureRouter.swift; sourceTree = "<group>"; };
 		A9639B9723C49F390090562D /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		A9639B9A23C4D10F0090562D /* SetupProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProtocols.swift; sourceTree = "<group>"; };
 		A9639B9E23C4D2250090562D /* SetupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPresenter.swift; sourceTree = "<group>"; };
@@ -58,6 +79,12 @@
 		A9639BB023C506860090562D /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		A9639BB223C5070A0090562D /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
 		A9639BB423C507CE0090562D /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
+		A9639BBB23C51D0B0090562D /* SigningProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningProtocols.swift; sourceTree = "<group>"; };
+		A9639BBD23C51D2D0090562D /* SigningInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningInteractor.swift; sourceTree = "<group>"; };
+		A9639BBF23C51D390090562D /* SigningRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningRouter.swift; sourceTree = "<group>"; };
+		A9639BC123C51D480090562D /* SigningPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningPresenter.swift; sourceTree = "<group>"; };
+		A97C4A7923CC8B3E00DF1590 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A97D79BC23C7E22500E622A5 /* SignaturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePresenter.swift; sourceTree = "<group>"; };
 		A98A1E9F23C1E290005B37D6 /* Ethereum Signer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ethereum Signer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98A1EA223C1E290005B37D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A98A1EA423C1E290005B37D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,13 +98,22 @@
 		A98A1EC923C270B8005B37D6 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		A98A1ECB23C271DB005B37D6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A98A1ED023C27815005B37D6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A992B4F423C86230003FF44A /* ScannerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerInteractor.swift; sourceTree = "<group>"; };
+		A992B4F623C8623E003FF44A /* ScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPresenter.swift; sourceTree = "<group>"; };
+		A992B4F823C8624C003FF44A /* ScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerRouter.swift; sourceTree = "<group>"; };
+		A992B4FA23C86267003FF44A /* ScannerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerProtocols.swift; sourceTree = "<group>"; };
 		A9ADBA1923C3DF8F00738703 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 		A9ADBA1C23C3E3FC00738703 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		A9ADBA1F23C3E51800738703 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		A9ADBA2223C3E85600738703 /* EthereumClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumClient.swift; sourceTree = "<group>"; };
+		A9B6656523CBDC2400F7429D /* Signature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		A9E8FB0D23C279B40046A40C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A9E8FB0F23C285270046A40C /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		A9E8FB1223C293AE0046A40C /* SigningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningViewController.swift; sourceTree = "<group>"; };
+		A9FF186A23C70A8000BF2965 /* VerificationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationProtocols.swift; sourceTree = "<group>"; };
+		A9FF186C23C70B3F00BF2965 /* VerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPresenter.swift; sourceTree = "<group>"; };
+		A9FF186E23C70C0600BF2965 /* VerificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationInteractor.swift; sourceTree = "<group>"; };
+		A9FF187023C70C8600BF2965 /* VerificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationRouter.swift; sourceTree = "<group>"; };
 		B05A4237C007042906FA3D59 /* Pods-EthereumSignerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerTests.release.xcconfig"; path = "Target Support Files/Pods-EthereumSignerTests/Pods-EthereumSignerTests.release.xcconfig"; sourceTree = "<group>"; };
 		B2D15E8D59F76047A82AEA8F /* Pods-EthereumSigner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSigner.release.xcconfig"; path = "Target Support Files/Pods-EthereumSigner/Pods-EthereumSigner.release.xcconfig"; sourceTree = "<group>"; };
 		F39C3C8E9775350293977575 /* Pods-EthereumSignerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerTests.debug.xcconfig"; path = "Target Support Files/Pods-EthereumSignerTests/Pods-EthereumSignerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,12 +151,53 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A9639B9623C49F2B0090562D /* Entity */ = {
+		A95F28B523CBD38A0014FD23 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A9ADBA1923C3DF8F00738703 /* SignatureViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A95F28B623CBD3930014FD23 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A95F28B723CBD3AA0014FD23 /* SignatureProtocol.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		A95F28B923CBD4970014FD23 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A97D79BC23C7E22500E622A5 /* SignaturePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		A95F28BA23CBD4F90014FD23 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A95F28BB23CBD50F0014FD23 /* SignatureInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		A95F28BD23CBD61E0014FD23 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A95F28BE23CBD6380014FD23 /* SignatureRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		A9639B9623C49F2B0090562D /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
 				A9639B9723C49F390090562D /* Wallet.swift */,
+				A97C4A7923CC8B3E00DF1590 /* DataManager.swift */,
 			);
-			path = Entity;
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		A9639B9923C4CBE30090562D /* app-settings */ = {
@@ -212,6 +289,46 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
+		A9639BB623C51CCD0090562D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A9E8FB1223C293AE0046A40C /* SigningViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A9639BB723C51CD30090562D /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A9639BC123C51D480090562D /* SigningPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		A9639BB823C51CDA0090562D /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A9639BBF23C51D390090562D /* SigningRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		A9639BB923C51CE30090562D /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A9639BBD23C51D2D0090562D /* SigningInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		A9639BBA23C51CEE0090562D /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A9639BBB23C51D0B0090562D /* SigningProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 		A98A1E9623C1E290005B37D6 = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				A9639B9923C4CBE30090562D /* app-settings */,
-				A9639B9623C49F2B0090562D /* Entity */,
+				A9639B9623C49F2B0090562D /* DataManager */,
 				A9ADBA2123C3E84000738703 /* EthereumClient */,
 				A98A1ECF23C27806005B37D6 /* Base */,
 				A98A1EC423C1E2F3005B37D6 /* app-Modules */,
@@ -260,10 +377,10 @@
 		A98A1EC423C1E2F3005B37D6 /* app-Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A9E8FB1123C2936F0046A40C /* signing-module */,
 				A98A1ECD23C27394005B37D6 /* setup-module */,
 				A98A1ECE23C273A0005B37D6 /* account-module */,
 				A9ADBA1B23C3E3E600738703 /* verification-module */,
-				A9E8FB1123C2936F0046A40C /* signing-module */,
 				A9ADBA1E23C3E50700738703 /* scanner-module */,
 				A9ADBA1823C3DF7400738703 /* signature-module */,
 			);
@@ -307,6 +424,7 @@
 		A98A1ECD23C27394005B37D6 /* setup-module */ = {
 			isa = PBXGroup;
 			children = (
+				A9B6656023CBDB8E00F7429D /* entity */,
 				A9639BA623C4E01D0090562D /* view */,
 				A9639BA323C4D2FC0090562D /* router */,
 				A9639BA023C4D29B0090562D /* interactor */,
@@ -319,6 +437,7 @@
 		A98A1ECE23C273A0005B37D6 /* account-module */ = {
 			isa = PBXGroup;
 			children = (
+				A9B6656123CBDBA200F7429D /* entity */,
 				A9639BAD23C503480090562D /* presenter */,
 				A9639BAC23C5033B0090562D /* protocols */,
 				A9639BAA23C5032E0090562D /* interactor */,
@@ -336,10 +455,55 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		A992B4EF23C861E4003FF44A /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A992B4FA23C86267003FF44A /* ScannerProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		A992B4F023C861EB003FF44A /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A992B4F823C8624C003FF44A /* ScannerRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		A992B4F123C861F5003FF44A /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A992B4F623C8623E003FF44A /* ScannerPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		A992B4F223C8620D003FF44A /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A992B4F423C86230003FF44A /* ScannerInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		A992B4F323C86213003FF44A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A9ADBA1F23C3E51800738703 /* ScannerViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		A9ADBA1823C3DF7400738703 /* signature-module */ = {
 			isa = PBXGroup;
 			children = (
-				A9ADBA1923C3DF8F00738703 /* SignatureViewController.swift */,
+				A9B6656423CBDBC400F7429D /* entity */,
+				A95F28BD23CBD61E0014FD23 /* router */,
+				A95F28BA23CBD4F90014FD23 /* interactor */,
+				A95F28B923CBD4970014FD23 /* presenter */,
+				A95F28B623CBD3930014FD23 /* protocols */,
+				A95F28B523CBD38A0014FD23 /* view */,
 			);
 			path = "signature-module";
 			sourceTree = "<group>";
@@ -347,7 +511,12 @@
 		A9ADBA1B23C3E3E600738703 /* verification-module */ = {
 			isa = PBXGroup;
 			children = (
-				A9ADBA1C23C3E3FC00738703 /* VerificationViewController.swift */,
+				A9B6656223CBDBAC00F7429D /* entity */,
+				A9FF186923C70A3900BF2965 /* view */,
+				A9FF186823C70A3100BF2965 /* router */,
+				A9FF186723C70A2700BF2965 /* interactor */,
+				A9FF186623C70A1E00BF2965 /* presenter */,
+				A9FF186523C70A1600BF2965 /* protocols */,
 			);
 			path = "verification-module";
 			sourceTree = "<group>";
@@ -355,7 +524,12 @@
 		A9ADBA1E23C3E50700738703 /* scanner-module */ = {
 			isa = PBXGroup;
 			children = (
-				A9ADBA1F23C3E51800738703 /* ScannerViewController.swift */,
+				A9B6656323CBDBB600F7429D /* entity */,
+				A992B4F323C86213003FF44A /* view */,
+				A992B4F223C8620D003FF44A /* interactor */,
+				A992B4F123C861F5003FF44A /* presenter */,
+				A992B4F023C861EB003FF44A /* router */,
+				A992B4EF23C861E4003FF44A /* protocols */,
 			);
 			path = "scanner-module";
 			sourceTree = "<group>";
@@ -368,12 +542,100 @@
 			path = EthereumClient;
 			sourceTree = "<group>";
 		};
+		A9B6655F23CBDB8300F7429D /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				A9B6656523CBDC2400F7429D /* Signature.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		A9B6656023CBDB8E00F7429D /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		A9B6656123CBDBA200F7429D /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		A9B6656223CBDBAC00F7429D /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		A9B6656323CBDBB600F7429D /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		A9B6656423CBDBC400F7429D /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
 		A9E8FB1123C2936F0046A40C /* signing-module */ = {
 			isa = PBXGroup;
 			children = (
-				A9E8FB1223C293AE0046A40C /* SigningViewController.swift */,
+				A9B6655F23CBDB8300F7429D /* entity */,
+				A9639BBA23C51CEE0090562D /* protocols */,
+				A9639BB923C51CE30090562D /* interactor */,
+				A9639BB823C51CDA0090562D /* router */,
+				A9639BB723C51CD30090562D /* presenter */,
+				A9639BB623C51CCD0090562D /* view */,
 			);
 			path = "signing-module";
+			sourceTree = "<group>";
+		};
+		A9FF186523C70A1600BF2965 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF186A23C70A8000BF2965 /* VerificationProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		A9FF186623C70A1E00BF2965 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF186C23C70B3F00BF2965 /* VerificationPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		A9FF186723C70A2700BF2965 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF186E23C70C0600BF2965 /* VerificationInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		A9FF186823C70A3100BF2965 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF187023C70C8600BF2965 /* VerificationRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		A9FF186923C70A3900BF2965 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A9ADBA1C23C3E3FC00738703 /* VerificationViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		C9E3701D6B978A83D4931FD8 /* Frameworks */ = {
@@ -553,26 +815,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9E8FB1023C285270046A40C /* Fonts.swift in Sources */,
+				A97C4A7A23CC8B3E00DF1590 /* DataManager.swift in Sources */,
+				A9FF186D23C70B3F00BF2965 /* VerificationPresenter.swift in Sources */,
 				A9ADBA1A23C3DF8F00738703 /* SignatureViewController.swift in Sources */,
+				A992B4F923C8624C003FF44A /* ScannerRouter.swift in Sources */,
+				A9FF186B23C70A8000BF2965 /* VerificationProtocols.swift in Sources */,
+				A95F28BF23CBD6380014FD23 /* SignatureRouter.swift in Sources */,
 				A98A1ECC23C271DB005B37D6 /* Extensions.swift in Sources */,
 				A9ADBA1D23C3E3FC00738703 /* VerificationViewController.swift in Sources */,
+				A9639BBE23C51D2D0090562D /* SigningInteractor.swift in Sources */,
 				A9E8FB0E23C279B40046A40C /* AccountViewController.swift in Sources */,
 				A98A1ECA23C270B8005B37D6 /* UIComponents.swift in Sources */,
 				A9639BB123C506860090562D /* AccountPresenter.swift in Sources */,
 				A9ADBA2023C3E51800738703 /* ScannerViewController.swift in Sources */,
+				A9639BBC23C51D0B0090562D /* SigningProtocols.swift in Sources */,
 				A9639B9F23C4D2250090562D /* SetupPresenter.swift in Sources */,
 				A9639BA223C4D2AE0090562D /* SetupInteractor.swift in Sources */,
 				A98A1EA323C1E290005B37D6 /* AppDelegate.swift in Sources */,
+				A992B4FB23C86267003FF44A /* ScannerProtocols.swift in Sources */,
+				A95F28BC23CBD50F0014FD23 /* SignatureInteractor.swift in Sources */,
+				A9639BC023C51D390090562D /* SigningRouter.swift in Sources */,
 				A9E8FB1323C293AE0046A40C /* SigningViewController.swift in Sources */,
 				A9639BB523C507CE0090562D /* AccountInteractor.swift in Sources */,
 				A9639BA523C4D3180090562D /* SetupRouter.swift in Sources */,
 				A98A1EA523C1E290005B37D6 /* SceneDelegate.swift in Sources */,
+				A97D79BD23C7E22500E622A5 /* SignaturePresenter.swift in Sources */,
 				A9639B9B23C4D10F0090562D /* SetupProtocols.swift in Sources */,
+				A992B4F723C8623E003FF44A /* ScannerPresenter.swift in Sources */,
 				A9ADBA2323C3E85600738703 /* EthereumClient.swift in Sources */,
+				A992B4F523C86230003FF44A /* ScannerInteractor.swift in Sources */,
+				A9FF186F23C70C0600BF2965 /* VerificationInteractor.swift in Sources */,
+				A9639BC223C51D480090562D /* SigningPresenter.swift in Sources */,
 				A9639B9823C49F390090562D /* Wallet.swift in Sources */,
 				A9639BAF23C5036D0090562D /* AccountProtocols.swift in Sources */,
+				A9B6656623CBDC2400F7429D /* Signature.swift in Sources */,
 				A9639BB323C5070A0090562D /* AccountRouter.swift in Sources */,
+				A9FF187123C70C8600BF2965 /* VerificationRouter.swift in Sources */,
 				A9639BA723C4E0E50090562D /* SetupViewController.swift in Sources */,
+				A95F28B823CBD3AA0014FD23 /* SignatureProtocol.swift in Sources */,
 				A98A1ED123C27815005B37D6 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

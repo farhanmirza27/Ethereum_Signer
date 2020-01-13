@@ -21,7 +21,9 @@ protocol ViewToPresenterAccountProtocol: class{
 }
 
 protocol PresenterToViewAccountProtocol: class{
-    func fetchBalance()
+    func displayBalance(walletAddress : String, balance : String)
+    func showError()
+    
 }
 
 protocol PresenterToRouterAccountProtocol: class {
@@ -38,7 +40,7 @@ protocol PresenterToInteractorAccountProtocol: class {
 }
 
 protocol InteractorToPresenterAccountProtocol: class {
-    func fetchAccountBalanceSuccess()
-    func fetchAccountBalanceFailed()
+    func fetchAccountBalanceSuccess(walletAddress : String, balance : String)
+    func fetchAccountBalanceFailed(error : String)
 }
 

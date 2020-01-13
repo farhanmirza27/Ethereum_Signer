@@ -9,6 +9,10 @@
 
 import UIKit
 
+protocol BaseView {
+    func onError(_ error: Error)
+}
+
 class BaseViewController: UIViewController {
     var saveAreaView:UIView = {
         let view = UIView()

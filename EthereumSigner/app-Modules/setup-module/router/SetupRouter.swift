@@ -10,7 +10,7 @@ import UIKit
 
 
 class SetupRouter:PresenterToRouterProtocol{
-   
+    
     static func createModule() -> SetupViewController {
         
         let view =  SetupViewController()
@@ -34,6 +34,6 @@ class SetupRouter:PresenterToRouterProtocol{
     
     func logout(navigationConroller: UINavigationController) {
         navigationConroller.popViewController(animated: true)
-       }
-        
+    }
+    
 }

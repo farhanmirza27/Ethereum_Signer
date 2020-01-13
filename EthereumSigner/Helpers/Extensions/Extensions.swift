@@ -182,3 +182,41 @@ extension UIImageView {
     }
 }
 
+
+
+// Encodable 
+extension Encodable {
+    
+    subscript(key: String) -> Any? {
+        return dictionary[key]
+    }
+    var dictionary: [String: Any] {
+        return (try? JSONSerialization.jsonObject(with: JSONEncoder.encoder.encode(self))) as? [String: Any] ?? [:]
+    }
+    
+    var json: String {
+        return try! String(data: JSONEncoder.encoder.encode(self), encoding: .utf8)!
+    }
+}
+
+extension JSONDecoder {
+    
+    static var decoder : JSONDecoder {
+        get {
+            let decoder =  JSONDecoder()
+            decoder.dateDecodingStrategy = .secondsSince1970
+            return decoder
+        }
+    }
+    
+}
+
+extension JSONEncoder {
+    
+    static var encoder :  JSONEncoder{
+        get{
+            let encoder =  JSONEncoder()
+            return encoder
+        }
+    }
+}

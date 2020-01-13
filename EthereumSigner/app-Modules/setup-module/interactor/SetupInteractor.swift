@@ -9,9 +9,15 @@
 import Foundation
 
 class SetupInteractor: PresenterToInteractorProtocol{
+    
+    
     var presenter: InteractorToPresenterProtocol?
     
-    func saveUserWallet(wallet : Wallet) {
+    func saveUserPrivateKey(key: String) {
+    DataManager.shared.savePrivateKey(key: key)
+    presenter?.userPrivateKeySaved()
     }
     
 }
+
+

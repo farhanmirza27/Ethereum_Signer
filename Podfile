@@ -6,7 +6,8 @@ target 'EthereumSigner' do
   use_frameworks!
 
   # Pods for EthereumSigner
-   pod 'web3.swift.pod'
+  pod 'web3.swift.pod'
+  pod 'Web3'
 
   target 'EthereumSignerTests' do
     inherit! :search_paths

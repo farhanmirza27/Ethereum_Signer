@@ -247,54 +247,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E599A67F-19AA-490D-84FA-BA57E8ED1CDF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EthereumSigner/app-Modules/verification-module/presenter/VerificationPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "verifyMessageSignature(message:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B9A5C234-2D9A-42EE-8E44-C919D3A52912"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EthereumSigner/app-Modules/verification-module/presenter/VerificationPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "signatureVerifySuccess()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C938E8FB-B88A-47D5-9F8F-AAEEE3A04507"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EthereumSigner/app-Modules/verification-module/presenter/VerificationPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "signatureVerifyFailed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D2FFA14F-58E2-4684-B2BF-87124EDE67F4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -311,22 +263,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C54D3B89-A86D-45C3-B574-363D65142B38"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EthereumSigner/app-Modules/verification-module/presenter/VerificationPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "showScannerController(navigationController:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7CC54C39-D5F9-4986-8386-B46A144FAFC1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -336,23 +272,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "signMessageWithPrivateKey(message:privateKey:_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4BB928E5-1123-4148-97D1-5A59BAB24D9D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EthereumSigner/app-Modules/signing-module/router/SigningRouter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "pushToSignatureScreen(navigationConroller:)"
+            landmarkName = "importAccount(privateKey:password:_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -368,7 +288,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
             endingLineNumber = "78"
-            landmarkName = "displayBalance(walletAddress:balance:)"
+            landmarkName = "showError()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -388,11 +308,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6CF6B725-93E4-4E0B-AC82-154499401F55 - 65feb34366f684c"
+                  uuid = "6CF6B725-93E4-4E0B-AC82-154499401F55 - 1b43d61f7c1c3199"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Ethereum_Signer.Wallet) -&gt; () in Ethereum_Signer.AccountInteractor.fetchAccountBalance() -&gt; ()"
+                  symbolName = "closure #1 (Ethereum_Signer.Account) -&gt; () in Ethereum_Signer.AccountInteractor.fetchAccountBalance() -&gt; ()"
                   moduleName = "Ethereum Signer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/farhanmirza/Desktop/EthereumSigner/EthereumSigner/app-Modules/account-module/interactor/AccountInteractor.swift"
@@ -400,7 +320,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
                   endingLineNumber = "22"
-                  offsetFromSymbolStart = "346">
+                  offsetFromSymbolStart = "396">
                </Location>
                <Location
                   uuid = "6CF6B725-93E4-4E0B-AC82-154499401F55 - 170b738f2f3f8945"
@@ -415,7 +335,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "84">
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -496,14 +416,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "29">
+                  offsetFromSymbolStart = "52">
                </Location>
                <Location
-                  uuid = "2591AD4E-D507-4034-80B6-41AB0D76D027 - 65feb34366f684c"
+                  uuid = "2591AD4E-D507-4034-80B6-41AB0D76D027 - 1b43d61f7c1c3199"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Ethereum_Signer.Wallet) -&gt; () in Ethereum_Signer.AccountInteractor.fetchAccountBalance() -&gt; ()"
+                  symbolName = "closure #1 (Ethereum_Signer.Account) -&gt; () in Ethereum_Signer.AccountInteractor.fetchAccountBalance() -&gt; ()"
                   moduleName = "Ethereum Signer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/farhanmirza/Desktop/EthereumSigner/EthereumSigner/app-Modules/account-module/interactor/AccountInteractor.swift"
@@ -511,7 +431,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
                   endingLineNumber = "20"
-                  offsetFromSymbolStart = "121">
+                  offsetFromSymbolStart = "136">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -544,47 +464,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "signMessageWithPrivateKey(message:privateKey:_:_:)"
+            landmarkName = "fetchAccountBalance(address:_:_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4D4C1350-904C-412F-9043-29E8CFA41F5E - 3d599194759e276e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ethereum_Signer.EthereumClient.signMessageWithPrivateKey(message: Swift.String, privateKey: Swift.String, _: (Swift.Bool) -&gt; (), _: (Swift.Error) -&gt; ()) -&gt; ()"
-                  moduleName = "Ethereum Signer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/farhanmirza/Desktop/EthereumSigner/EthereumSigner/EthereumClient/EthereumClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "343">
-               </Location>
-               <Location
-                  uuid = "4D4C1350-904C-412F-9043-29E8CFA41F5E - f6e1936d63fa941b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Web3.EthereumPrivateKey) -&gt; () in Ethereum_Signer.EthereumClient.signMessageWithPrivateKey(message: Swift.String, privateKey: Swift.String, _: (Swift.Bool) -&gt; (), _: (Swift.Error) -&gt; ()) -&gt; ()"
-                  moduleName = "Ethereum Signer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/farhanmirza/Desktop/EthereumSigner/EthereumSigner/EthereumClient/EthereumClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "147">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FC656513-D745-418D-A918-729C25EEDAFD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EthereumSigner/app-Modules/signature-module/interactor/SignatureInteractor.swift"
@@ -624,8 +512,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
             endingLineNumber = "46"
-            landmarkName = "fetchAccountBalance(address:_:_:)"
-            landmarkType = "7">
+            landmarkName = "EthereumClient"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -640,24 +528,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
-            landmarkName = "fetchAccountBalance(address:_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8284F24F-BE42-4F88-B312-9E5626356B9C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EthereumSigner/app-Modules/scanner-module/interactor/ScannerInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "verifySignatureWithQRCode(address:)"
-            landmarkType = "7">
+            landmarkName = "EthereumClient"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -695,16 +567,192 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DE97970F-5DA3-48F4-A437-1E51760998E6"
+            uuid = "21E79D36-8BCC-4104-AB6D-56DCB24E41E5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EthereumSigner/EthereumClient/EthereumClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "verifySignatureWithPublicKey(message:_:_:)"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "importAccount(privateKey:password:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B065F00A-E37C-46CE-AFDC-BFDC3F9A8D83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/signature-module/interactor/SignatureInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "getSignature()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "780D2A84-2211-4889-985D-08F80329CF29"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/scanner-module/view/ScannerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "found(code:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDB1C49F-73F6-48EC-8097-A4E347E331D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/scanner-module/view/ScannerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "metadataOutput(_:didOutput:from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D8C5416-74EE-4AD4-97E0-F4055D3632C8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/scanner-module/presenter/ScannerPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "verifySignatureWithQRCode(address:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA0ABCEE-7FC2-46C4-AB50-E3F5E82C0F9D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/scanner-module/interactor/ScannerInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "verifySignatureWithQRCode(address:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18DA5995-3878-4C0F-AEA6-FC69520A8D61"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/signing-module/router/SigningRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "pushToSignatureScreen(navigationConroller:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6516744C-9CED-4715-9C33-7BA03D8E8926"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/EthereumClient/EthereumClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "signMessageWithPrivateKey(message:privateKey:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7742FF3A-470B-406C-9867-67468D3DFDEB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/EthereumClient/EthereumClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "signMessageWithPrivateKey(message:privateKey:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E929A75B-C06A-4E9B-80B3-A604E2C1B520"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/scanner-module/presenter/ScannerPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "signatureVerifySuccess()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "805473C7-8E64-4E2C-B06B-40DFC019DC31"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/scanner-module/presenter/ScannerPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "signatureVerifyFailed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCACA691-C4AF-4D8D-B9F6-FCE53BB767D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EthereumSigner/app-Modules/scanner-module/interactor/ScannerInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "verifySignatureWithQRCode(address:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

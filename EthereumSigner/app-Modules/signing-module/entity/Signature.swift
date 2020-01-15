@@ -11,13 +11,15 @@ import Web3
 protocol  SignatureRequest : Codable  {
     func  getMessage() -> String
     func  getAddress() -> String
+    func  getPublicKey() -> String
 }
 
 struct Signature :  SignatureRequest {
-    
+  
     
     var address : String
     var message : String
+    var key     : String?
     
     func getMessage() -> String {
         return message
@@ -26,6 +28,13 @@ struct Signature :  SignatureRequest {
     func getAddress() -> String {
         return address
     }
+    
+    func getPublicKey() -> String {
+        return key ?? ""
+      }
+      
+      
+    
     
 }
 

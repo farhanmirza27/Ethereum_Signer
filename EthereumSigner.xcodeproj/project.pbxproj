@@ -11,7 +11,7 @@
 		A95F28B823CBD3AA0014FD23 /* SignatureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F28B723CBD3AA0014FD23 /* SignatureProtocol.swift */; };
 		A95F28BC23CBD50F0014FD23 /* SignatureInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F28BB23CBD50F0014FD23 /* SignatureInteractor.swift */; };
 		A95F28BF23CBD6380014FD23 /* SignatureRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F28BE23CBD6380014FD23 /* SignatureRouter.swift */; };
-		A9639B9823C49F390090562D /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639B9723C49F390090562D /* Wallet.swift */; };
+		A9639B9823C49F390090562D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639B9723C49F390090562D /* Account.swift */; };
 		A9639B9B23C4D10F0090562D /* SetupProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639B9A23C4D10F0090562D /* SetupProtocols.swift */; };
 		A9639B9F23C4D2250090562D /* SetupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639B9E23C4D2250090562D /* SetupPresenter.swift */; };
 		A9639BA223C4D2AE0090562D /* SetupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9639BA123C4D2AE0090562D /* SetupInteractor.swift */; };
@@ -44,6 +44,7 @@
 		A9ADBA2023C3E51800738703 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADBA1F23C3E51800738703 /* ScannerViewController.swift */; };
 		A9ADBA2323C3E85600738703 /* EthereumClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ADBA2223C3E85600738703 /* EthereumClient.swift */; };
 		A9B6656623CBDC2400F7429D /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6656523CBDC2400F7429D /* Signature.swift */; };
+		A9BBC68223CE619400A0D17B /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BBC68123CE619400A0D17B /* Wallet.swift */; };
 		A9E8FB0E23C279B40046A40C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E8FB0D23C279B40046A40C /* AccountViewController.swift */; };
 		A9E8FB1023C285270046A40C /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E8FB0F23C285270046A40C /* Fonts.swift */; };
 		A9E8FB1323C293AE0046A40C /* SigningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E8FB1223C293AE0046A40C /* SigningViewController.swift */; };
@@ -70,7 +71,7 @@
 		A95F28B723CBD3AA0014FD23 /* SignatureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureProtocol.swift; sourceTree = "<group>"; };
 		A95F28BB23CBD50F0014FD23 /* SignatureInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureInteractor.swift; sourceTree = "<group>"; };
 		A95F28BE23CBD6380014FD23 /* SignatureRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureRouter.swift; sourceTree = "<group>"; };
-		A9639B9723C49F390090562D /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		A9639B9723C49F390090562D /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		A9639B9A23C4D10F0090562D /* SetupProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProtocols.swift; sourceTree = "<group>"; };
 		A9639B9E23C4D2250090562D /* SetupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPresenter.swift; sourceTree = "<group>"; };
 		A9639BA123C4D2AE0090562D /* SetupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupInteractor.swift; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		A9ADBA1F23C3E51800738703 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		A9ADBA2223C3E85600738703 /* EthereumClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumClient.swift; sourceTree = "<group>"; };
 		A9B6656523CBDC2400F7429D /* Signature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		A9BBC68123CE619400A0D17B /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		A9E8FB0D23C279B40046A40C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A9E8FB0F23C285270046A40C /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		A9E8FB1223C293AE0046A40C /* SigningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningViewController.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 		A9B6656023CBDB8E00F7429D /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				A9BBC68123CE619400A0D17B /* Wallet.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -559,7 +562,7 @@
 		A9B6656123CBDBA200F7429D /* entity */ = {
 			isa = PBXGroup;
 			children = (
-				A9639B9723C49F390090562D /* Wallet.swift */,
+				A9639B9723C49F390090562D /* Account.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -840,13 +843,14 @@
 				A9639BA523C4D3180090562D /* SetupRouter.swift in Sources */,
 				A98A1EA523C1E290005B37D6 /* SceneDelegate.swift in Sources */,
 				A97D79BD23C7E22500E622A5 /* SignaturePresenter.swift in Sources */,
+				A9BBC68223CE619400A0D17B /* Wallet.swift in Sources */,
 				A9639B9B23C4D10F0090562D /* SetupProtocols.swift in Sources */,
 				A992B4F723C8623E003FF44A /* ScannerPresenter.swift in Sources */,
 				A9ADBA2323C3E85600738703 /* EthereumClient.swift in Sources */,
 				A992B4F523C86230003FF44A /* ScannerInteractor.swift in Sources */,
 				A9FF186F23C70C0600BF2965 /* VerificationInteractor.swift in Sources */,
 				A9639BC223C51D480090562D /* SigningPresenter.swift in Sources */,
-				A9639B9823C49F390090562D /* Wallet.swift in Sources */,
+				A9639B9823C49F390090562D /* Account.swift in Sources */,
 				A9639BAF23C5036D0090562D /* AccountProtocols.swift in Sources */,
 				A9B6656623CBDC2400F7429D /* Signature.swift in Sources */,
 				A9639BB323C5070A0090562D /* AccountRouter.swift in Sources */,

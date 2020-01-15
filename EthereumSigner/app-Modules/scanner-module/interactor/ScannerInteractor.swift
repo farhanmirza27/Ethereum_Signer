@@ -17,9 +17,9 @@ class ScannerInteractor : PresenterToInteractorScannerProtocol {
         
         // Fetch Signature of message need to be verified from user-defaults
         
-        let signatureRequiredVerfication = DataManager.shared.find(type: Signature.self, forKey: "Signature")
+        let signatureRequiredVerfication = DataManager.shared.find(type: Signature.self, forKey: "VerifySignature")
         if let etherumAddress = signatureRequiredVerfication?.getAddress() {
-            if etherumAddress == address { // Address from QR cide
+            if etherumAddress == address { // Address from QR code
                 presenter?.signatureVerifySuccess()
             }
             else {

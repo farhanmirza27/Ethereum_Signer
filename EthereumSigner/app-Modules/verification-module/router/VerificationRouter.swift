@@ -27,7 +27,8 @@ class VerficationRouter : PresenterToRouterVerificationProtocol {
     }
     
     func pushToScannerScreen(navigationConroller: UINavigationController) {
-        navigationConroller.pushViewController(ScannerViewController(), animated: true)
+        let scannerModule  = ScannerRouter.createScannerModule()
+        navigationConroller.pushViewController(scannerModule, animated: true)
     }
     
     

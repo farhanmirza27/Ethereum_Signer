@@ -17,10 +17,17 @@ typealias ErrorHandler = (Error) -> Void
 
 
 protocol EthereumClientProtocol {
-    func fetchAccountBalance(address : String,_ responseHandler:@escaping ResponseHandler<Wallet>,_ errorHandler:@escaping ErrorHandler)
+    
+    func importAccount(privateKey : String, password : String,_ responseHandler:@escaping ResponseHandler<Wallet>,_ errorHandler:@escaping ErrorHandler)
+   
+    func fetchAccountBalance(address : String,_ responseHandler:@escaping ResponseHandler<Account>,_ errorHandler:@escaping ErrorHandler)
+    
     func signMessageWithPrivateKey(message : String, privateKey : String, _ responseHandler:@escaping ResponseHandler<Bool>,_ errorHandler:@escaping ErrorHandler)
+    
     func getEthereumPrivateKey(keyString : String,_ responseHandler:@escaping ResponseHandler<EthereumPrivateKey>,_ errorHandler:@escaping ErrorHandler)
+    
     func verifySignatureWithPublicKey(message : String,_ responseHandler:@escaping ResponseHandler<Bool>,_ errorHandler:@escaping ErrorHandler)
+    
     
 }
 
@@ -30,20 +37,20 @@ protocol EthereumClientProtocol {
 // Handle all request for ethereum
 
 class EthereumClient : EthereumClientProtocol {
-    
+  
     static let shared = EthereumClient()
     
     let web3RinkeBy =  Web3.InfuraRinkebyWeb3()
     
     
     // Fetch account balance from RinkeBy
-    func fetchAccountBalance(address : String,_ responseHandler: @escaping ResponseHandler<Wallet>, _ errorHandler: @escaping ErrorHandler) {
+    func fetchAccountBalance(address : String,_ responseHandler: @escaping ResponseHandler<Account>, _ errorHandler: @escaping ErrorHandler) {
         let address = EthereumAddress(address)
         if let walletAddress = address {
             let balanceResult = try! web3RinkeBy.eth.getBalance(address: walletAddress)
             let balance = Web3.Utils.formatToEthereumUnits(balanceResult, toUnits: .eth, decimals: 3)!
-            let wallet = Wallet(address: walletAddress.address, balance: balance)
-            responseHandler(wallet)
+            let account = Account(address: walletAddress.address, balance: balance)
+            responseHandler(account)
         }
         else {
            errorHandler(NSError())
@@ -51,6 +58,44 @@ class EthereumClient : EthereumClientProtocol {
         
     }
     
+    
+    // Import account with private key
+    func importAccount(privateKey: String, password : String, _ responseHandler: @escaping ResponseHandler<Wallet>, _ errorHandler: @escaping ErrorHandler) {
+          
+        let formattedKey = privateKey.trimmingCharacters(in: .whitespacesAndNewlines)
+       
+        if let dataKey = Data.fromHex(formattedKey) {
+                      if let keystore = try! EthereumKeystoreV3(privateKey: dataKey, password: password) {
+                          let name = "new wallet"
+                          let keyData = try! JSONEncoder().encode(keystore.keystoreParams)
+                          let address = keystore.addresses!.first!.address
+                          let wallet = Wallet(address: address, data: keyData, name: name, isHD: false)
+
+                          
+                          // Save wallet address to fetch account balance
+                         DataManager.shared.saveWalletAddress(address: address)
+                        
+                          let data = keyData
+                          let keystoreManager: KeystoreManager
+                          if wallet.isHD {
+                              let keystore = BIP32Keystore(data)!
+                              keystoreManager = KeystoreManager([keystore])
+                          } else {
+                              let keystore = EthereumKeystoreV3(data)!
+                              keystoreManager = KeystoreManager([keystore])
+                          }
+                          web3RinkeBy.addKeystoreManager(keystoreManager)
+                          responseHandler(wallet)
+                      }
+                      else {
+                          errorHandler(NSError())
+            }
+        }
+        else {
+        errorHandler(NSError())
+        }
+      }
+      
     
     // Sign message with user provided private key
     func signMessageWithPrivateKey(message: String, privateKey: String, _ responseHandler: @escaping ResponseHandler<Bool>, _ errorHandler: @escaping ErrorHandler) {
@@ -82,9 +127,6 @@ class EthereumClient : EthereumClientProtocol {
     func getEthereumPrivateKey(keyString: String, _ responseHandler: @escaping ResponseHandler<EthereumPrivateKey>, _ errorHandler: @escaping ErrorHandler) {
         do {
             let privateKey = try EthereumPrivateKey(hexPrivateKey: keyString)
-            // save User Wallet info
-            DataManager.shared.saveWalletAddress(address: privateKey.address.hex(eip55: false))
-            DataManager.shared.save(obj: userWallet(privateKey: privateKey.hex(), publicKey: privateKey.publicKey.hex(), address: privateKey.publicKey.hex()), forKey: "UserWallet")
             responseHandler(privateKey)
         } catch let error {
             print(error.localizedDescription)
@@ -108,10 +150,9 @@ class EthereumClient : EthereumClientProtocol {
                 let s = EthereumQuantity(signedMessage.s)
                 
                 if let publicKey = try? EthereumPublicKey(message: message.makeBytes(), v: v, r: r, s: s) {
-                    DataManager.shared.save(obj: userWallet(privateKey: result.hex(), publicKey: publicKey.hex(), address: publicKey.address.hex(eip55: false)), forKey: "UserWallet")
+                    DataManager.shared.save(obj: Signature(address: publicKey.address.hex(eip55: false), message: message, key: publicKey.hex()), forKey: "VerifySignature")
                     responseHandler(true)
                 // match this address with address fetched from QR code
-                    
                 }
             }
             

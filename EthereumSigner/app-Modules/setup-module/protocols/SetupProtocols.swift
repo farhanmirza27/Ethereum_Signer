@@ -31,10 +31,11 @@ protocol PresenterToRouterProtocol: class {
 
 protocol PresenterToInteractorProtocol: class {
     var presenter:InteractorToPresenterProtocol? {get set}
-    func saveUserPrivateKey(key : String)
+    func importAccount(privateKey : String) 
 }
 
 protocol InteractorToPresenterProtocol: class {
-    func userPrivateKeySaved()
+    func importAccountSuccess()
+    func importAccountFail()
 }
 

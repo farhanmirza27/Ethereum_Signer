@@ -12,10 +12,10 @@ class  SignatureInteractor : PresenterToInteractorSignatureProtocol {
     var presenter: InteractorToPresenterSignatureProtocol?
     
     func getSignature() {
-        let saveSignature =  DataManager.shared.find(type: Signature.self, forKey: "Signature")
+        let savedSignature =  DataManager.shared.find(type: Signature.self, forKey: "Signature")
         
-        if let walletAddress = saveSignature?.getAddress() {
-            if let QRCodeImage = EthereumClient.shared.generateQRCode(from: walletAddress), let message = saveSignature?.getMessage() {
+        if let walletAddress = savedSignature?.getAddress() {
+            if let QRCodeImage = EthereumClient.shared.generateQRCode(from: walletAddress), let message = savedSignature?.getMessage() {
              self.presenter?.getSignatureSuccess(message: message, QRCodeImage: QRCodeImage)
             }
         }

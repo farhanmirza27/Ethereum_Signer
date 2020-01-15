@@ -9,15 +9,19 @@
 import Foundation
 
 class SetupInteractor: PresenterToInteractorProtocol{
-    
-    
+ 
     var presenter: InteractorToPresenterProtocol?
     
-    func saveUserPrivateKey(key: String) {
-    DataManager.shared.savePrivateKey(key: key)
-    presenter?.userPrivateKeySaved()
-    }
-    
+       func importAccount(privateKey: String) {
+        // In future password should be user provodid
+        EthereumClient.shared.importAccount(privateKey: privateKey, password: "", {  result in
+            self.presenter?.importAccountSuccess()
+        }) {  error in
+            // handle error
+            self.presenter?.importAccountFail()
+        }
+     }
+     
 }
 
 

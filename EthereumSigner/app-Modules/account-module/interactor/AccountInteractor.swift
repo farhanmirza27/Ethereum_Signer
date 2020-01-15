@@ -17,7 +17,7 @@ class AccountInteractor: PresenterToInteractorAccountProtocol{
         // use Ethereum Client to fetch account balance
         
         EthereumClient.shared.fetchAccountBalance(address: DataManager.shared.getsaveWalletAddress(), { result in
-            self.presenter?.fetchAccountBalanceSuccess(walletAddress: result.address, balance: result.balance)
+            self.presenter?.fetchAccountBalanceSuccess(walletAddress: result.getAddress(), balance: result.getBalance())
             //
         }) { error in
             self.presenter?.fetchAccountBalanceFailed()

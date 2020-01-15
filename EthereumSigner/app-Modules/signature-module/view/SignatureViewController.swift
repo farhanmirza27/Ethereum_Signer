@@ -38,7 +38,7 @@ class SignatureViewController: BaseViewController {
 extension SignatureViewController : PresenterToViewSignatureProtocol {
     func showQRCode(message : String , QRCodeImage : UIImage) {
         // show returned data
-        messagelabel.text = message
+        messagelabel.text = "Message: " +  message
         signatureQRCode.image = QRCodeImage
     }
     

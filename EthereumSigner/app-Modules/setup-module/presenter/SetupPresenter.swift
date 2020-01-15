@@ -23,14 +23,19 @@ class SetupPresenter: ViewToPresenterProtocol {
     }
     
     func didClickDone(privateKey : String) {
-        interactor?.saveUserPrivateKey(key: privateKey)
+        interactor?.importAccount(privateKey: privateKey)
     }
     
 }
 
 extension SetupPresenter: InteractorToPresenterProtocol{
-    func userPrivateKeySaved() {
+    func importAccountSuccess() {
         // user private key saved. Move user to account screen
-        view?.showAccountScreen()
+          view?.showAccountScreen()
     }
+    
+    func importAccountFail() {
+        view?.showError()
+    }
+    
 }
